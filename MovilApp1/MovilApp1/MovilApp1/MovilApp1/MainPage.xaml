@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MovilApp1.MainPage">
+
+    <StackLayout Background="white"  >
+        <Label x:Name="lbl_principal"
+               Text="Inscripción ERN -- Ingrese sus datos"
+               FontSize="Medium"
+               TextColor="Black"/>
+        <ProgressBar x:Name="progress"
+                     Progress="0"/>
+        <Grid>
+            <Label x:Name="lbl_progress"
+                   Text="0%"
+                   FontSize="Large"
+                   TextColor="Black"/>
+            <Switch x:Name="sw_example"
+                    IsToggled="False"
+                    Toggled="sw_example_Toggled"/>
+        </Grid> 
+        <Frame Margin="8"
+               BackgroundColor="White">
+            <StackLayout>
+                <Entry x:Name="lbl_nombre"
+                       Placeholder="Ingrese Su Nombre"
+                       FontSize="Small"
+                       Completed="lbl_nombre_Completed"
+                       TextChanged="lbl_nombre_TextChanged"
+                       TextColor="Black"
+                       PlaceholderColor="#808080"/>
+                <Entry x:Name="lbl_correo"
+                       Placeholder="Ingrese Su Correo"
+                       FontSize="Small"
+                       Completed="lbl_correo_Completed"
+                       TextColor="Black"
+                       PlaceholderColor="#808080"/>
+                <Entry x:Name="lbl_password"
+                       Placeholder="Ingrese su contraseña"
+                       FontSize="Small"
+                       IsPassword="True"
+                       Completed="lbl_password_Completed"
+                       TextColor="Black"
+                       PlaceholderColor="#808080"/>
+                <Entry x:Name="lbl_password1"
+                       Placeholder="Repita Su Contraseña"
+                       FontSize="Small"
+                       Completed="lbl_password1_Completed"
+                       TextColor="Black"
+                       PlaceholderColor="#808080"/>
+               
+                <Grid ColumnDefinitions="auto,*">
+                    <CheckBox x:Name="cbox_terminos"
+                              IsChecked="False"
+                              CheckedChanged="cbox_terminos_CheckedChanged"
+                              Grid.Column="0"/>
+                              
+                    <Label Text="Acepto Los terminos y condiciones"
+                            TextColor="Black"
+                            Grid.Column="1"
+                            VerticalOptions="Center"/>
+                </Grid>
+
+            </StackLayout>
+        </Frame>
+        <Button x:Name="btn_register"
+                Text="Registrar"
+                FontSize="Large"
+                Clicked="btn_register_Clicked"
+                CornerRadius="150"
+                TextColor="White"
+                BackgroundColor="Blue"
+                FontAttributes="Bold"
+                Padding="8"
+                Margin="15"/>
+    </StackLayout>
+
+</ContentPage>
